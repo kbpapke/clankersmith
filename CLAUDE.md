@@ -20,6 +20,12 @@ This file is a **routing directory** — not a context dump. Read only what appl
 | Before writing or running tests | `rules/testing-rules.md` |
 | Tests are failing | `rules/debugging-rules.md` |
 | Starting a new task | `rules/task-contracts.md` |
+| Before submitting any PR | `rules/pr-preflight.md` |
+| You are The Planner (story intake) | `skills/story-intake.md` |
+| You are The Builder (implementation) | `skills/feature-delivery.md` |
+| You are The Inspector (PR quality gate) | `skills/pr-quality-gate.md` |
+| You are The Guardian (PR maintenance) | `skills/pr-maintenance.md` |
+| You are The Librarian (self-improvement) | `skills/self-improvement.md` |
 | Unsure how to approach a problem | `skills/` — find the matching skill file |
 
 ---

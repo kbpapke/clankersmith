@@ -8,29 +8,50 @@ For each task, create a file: `contracts/{TASK_NAME}_contract.md`
 
 Template:
 ```
-# {TASK_NAME} Contract
+# CONTRACT: [Story ID] — [Title]
 
 ## Objective
-[One sentence describing the goal]
+One sentence: what changes for the user?
 
-## Implementation checklist
-- [ ] ...
+## Outcome Link (optional)
+What metric moves if this works? What pain does it address?
 
-## Tests that must pass
-- [ ] `test_name_here`
-- [ ] ...
+## Precise Implementation Spec
+[Be as specific as possible — exact file paths, function names, data shapes]
+[The Builder should not need to research anything. It should implement.]
 
-## Verification
-- [ ] Manual check / screenshot / output confirms expected behavior
+## Estimate
+- Complexity: [1–5 points]
+- Lines of change: [estimate]
 
-## Done when
-All boxes above are checked.
+## Success Criteria (full gate)
+- [ ] Lint passes
+- [ ] Tests pass: [specific test names or new tests to write]
+- [ ] No test files modified
+- [ ] [Any additional verify steps]
+
+## Done When
+All success criteria checked AND PR merged to main.
+
+## Stop-Hook
+Session CANNOT terminate until all success criteria are checked.
 ```
+
+## Full gate
+
+Nothing is "done" until the full gate passes:
+
+```
+Lint clean → Tests pass → Verify behavior → Session may end
+```
+
+No exceptions.
 
 ## Rules
 - You are NOT allowed to terminate a task session until all contract items are checked.
 - You are NOT allowed to mark a test as passing without actually running it.
 - If a contract item is ambiguous, STOP and ask for clarification before proceeding.
+- Research (what to build, how) is resolved before the contract is written. The Builder only implements.
 
 ## One contract per session
 Each working session should target one contract. Do not mix contracts in the same session — it causes context bloat and drift.

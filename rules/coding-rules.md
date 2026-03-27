@@ -18,6 +18,17 @@
 - Do not bias your own analysis. If reviewing code, report findings neutrally. Do not engineer bugs or successes.
 - If asked to "find bugs", instead: "search through the code, follow the logic, and report all findings."
 
+## Simplicity
+- Write the minimum code that solves the stated problem. Active check: "could this be fewer lines?"
+- No speculative code, no abstractions for one-time operations, no helpers that are only called once.
+- Strip dependencies where possible. Every package added is a future maintenance burden.
+
+## Stack
+- **Runtime:** Node.js (current LTS)
+- **Language:** JavaScript — match the existing module style (`'use strict'` + CommonJS or ESM)
+- **Package manager:** npm
+- Prefer `const` over `let`; never use `var`
+
 ## Quality gates
 - Do not mark a task complete until the task contract is fulfilled (see `rules/task-contracts.md`).
 - Do not stub implementations. Incomplete = not done.
